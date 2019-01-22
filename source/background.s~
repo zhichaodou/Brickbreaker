@@ -1,0 +1,6 @@
+	.section .data
+
+	.global background
+
+background:
+

@@ -1,0 +1,60 @@
+	.section .text
+	
+	.global startBall
+//r0 will contain paddlex
+//r1 will contain ballx
+startBall:
+	push 	{r4-r9,lr}
+	mov	r4,r0
+	mov	r5,r1
+kickOff:	
+	bl 	getSnes
+	cmp	r0,#0
+	beq	perfected
+	cmp	r0,#7
+	beq	Mright
+	cmp	r0,#6
+	beq	Mleft
+	b	kickOff
+
+Mright:
+	add	r4,#10
+	add	r5,#10
+	b	stalemate
+
+Mleft:
+	sub	r4,#10
+	sub	r5,#10
+
+staleMate:
+	
+
+perfected:	
+
+
+
+
+
+
+
+
+
+
+
+	.section .data
+
+
+	.align 4
+	.global ball
+
+
+
+
+
+
+
+
+
+
+ball:
+.ascii "\370\370\370\326\311\311\311\354\245\245\245\355\210\210\210\377"

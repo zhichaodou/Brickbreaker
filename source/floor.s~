@@ -1,0 +1,7 @@
+	.section .text
+
+	.global floor
+	.align 4
+	
+
+floor:
