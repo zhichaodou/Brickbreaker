@@ -1,0 +1,5 @@
+.align 4
+.global background
+
+background:
+
